@@ -1,0 +1,68 @@
+# Dependencies: never commit env, secrets, or local artifacts
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+service-account*.json
+*sa_key*.json
+
+# Python / FastAPI
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env_venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# Alembic / DB
+alembic.ini.local
+*.db
+*.sqlite3
+pgdata/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+dist/
+build/
+*.tsbuildinfo
+next-env.d.ts
+
+# TypeScript / test artifacts
+coverage/
+.playwright/
+test-results/
+
+# Uploads / models / local data (never commit real financial PDFs or model weights)
+uploads/
+tmp_uploads/
+storage/
+*.pdf
+!**/tests/**/fixtures/*.pdf
+models/
+*.bin
+*.pt
+*.onnx
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Temporary local skill source
+.temp-karpathy-skills/
